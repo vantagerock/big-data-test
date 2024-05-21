@@ -11,7 +11,6 @@ public class InvertedIndex {
     public static void main(String[]args){
         try {
             Configuration configuration= new Configuration();
-            // Job job=new Job(configuration,"invert index");
             Job job=Job.getInstance(configuration);
             job.setJarByClass(InvertedIndex.class);
             job.setMapperClass(Map.class);
@@ -21,8 +20,8 @@ public class InvertedIndex {
             FileInputFormat.addInputPath(job,new Path("/exp2"));
             FileOutputFormat.setOutputPath(job,new Path("/exp2/output"));
             System.exit(job.waitForCompletion(true)?0:1);
-        }catch (Exception e){
-            e.printStackTrace();
+        }catch (Exception ignored){
+
         }
     }
 }
