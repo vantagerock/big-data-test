@@ -1,11 +1,11 @@
 package org.example;
 
-import java.io.IOException;
-import java.util.StringTokenizer;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
-import org.apache.hadoop.mapreduce.Reducer;
 import org.apache.hadoop.mapreduce.lib.input.FileSplit;
+
+import java.io.IOException;
+import java.util.StringTokenizer;
 
 public class Map extends Mapper<Text,Text,Text,Text> {
     // private static Text keyInfo
